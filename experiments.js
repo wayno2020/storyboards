@@ -1,4 +1,4 @@
-if (1 == 2) {
+if (window.location.search.indexOf('loc=ZA') > -1) {
     var observer;
     var observerSet = false;
     var qtyElem;
