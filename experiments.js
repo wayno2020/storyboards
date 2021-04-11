@@ -32,7 +32,7 @@ if (window.location.search.indexOf('loc=ZA') > -1) {
        }, 1000);
     });
 
-    function initialiseVariables() {
+    var initialiseVariables = function () {
         qtyElem = document.querySelector('.sb-CheckoutInfo-checkoutInfoWrapper-checkoutInfo p span');
         checkoutInfoElem = document.querySelector('.sb-CheckoutInfo-checkoutInfoWrapper-checkoutInfo');
         fullPriceElem = document.querySelector('.sb-CheckoutInfo-checkoutInfoWrapper-checkoutInfo-fullPrice');
@@ -41,7 +41,7 @@ if (window.location.search.indexOf('loc=ZA') > -1) {
         checkoutTotalElem = checkoutInfoElem.querySelector('.sb-CheckoutInfo-checkoutInfoWrapper-checkoutInfo-total span');
     }
 
-    function calculateDiscount() {
+    var calculateDiscount = function () {
         if (checkoutInfoElem != null) {
             if (fullPriceElem.innerHTML.indexOf('$') > -1) {
                 discPriceVal = parseInt(discountedPriceElem.innerHTML.replace('$','').trim());
@@ -52,12 +52,12 @@ if (window.location.search.indexOf('loc=ZA') > -1) {
         return discount;
     }
 
-    function updateQty() {
+    var updateQty = function () {
         qty = qtyElem.innerHTML[0];
         return qty;
     }
 
-    function calculateRands() {
+    var calculateRands = function () {
         if (!discount) {
             calculateDiscount();
         }
@@ -72,7 +72,7 @@ if (window.location.search.indexOf('loc=ZA') > -1) {
         checkoutTotalElem.innerHTML = 'R' + qty*discount*price.toFixed(2);
     }
 
-    function observeCheckout() {
+    var observeCheckout = function () {
         // Qty mutation observer
         var target = document.querySelector('.sb-CheckoutInfo-checkoutInfoWrapper-checkoutInfo p span');
         observer = new MutationObserver(function(mutations) {
