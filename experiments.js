@@ -14,12 +14,9 @@ if (window.location.search.indexOf('loc=ZA') > -1) {
 
     console.log('loc=ZA');
     
-    document.querySelector('.sb-Pricing__wrapper__item.sb-Pricing__title h3').innerHTML = 
-        `Only&nbsp;<span class="strikethrough" style="user-select: auto;">R150.00</span>&nbsp;R99`;
-    document.querySelector('.board-measure span').innerHTML = `
-        20cm`;
-    document.querySelector('.board-measure-vertical span').innerHTML = `
-        20cm`;
+    document.querySelector('.sb-Pricing__wrapper__item.sb-Pricing__title h3').innerHTML = 'Only&nbsp;<span class="strikethrough" style="user-select: auto;">R150.00</span>&nbsp;R99';
+    document.querySelector('.board-measure span').innerHTML = '20cm';
+    document.querySelector('.board-measure-vertical span').innerHTML = '20cm';
 
     var footerButton = document.querySelector('.sb-Footer-button');
     footerButton.addEventListener('click', function(evt) {
