@@ -64,7 +64,7 @@
             updateQty();
             fullPriceElem.innerHTML = 'R'  + qty*price.toFixed(2);
             discountedPriceElem.innerHTML = 'R' + qty*price*discount.toFixed(2);
-            customShippingPriceElems.forEach(element => {
+            customShippingPriceElems.forEach(function(element) {
                if (element.innerHTML.indexOf('$') > -1) {
                  element.innerHTML = 'R100';
                }
