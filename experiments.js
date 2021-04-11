@@ -1,5 +1,4 @@
-alert('Script working');
-
+console.log('Script is working');
 
 if (window.location.search.indexOf('loc=ZA') > -1) {
     var observer;
