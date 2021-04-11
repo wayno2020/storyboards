@@ -1,3 +1,6 @@
+alert('Script working');
+
+
 if (window.location.search.indexOf('loc=ZA') > -1) {
     var observer;
     var observerSet = false;
@@ -9,7 +12,7 @@ if (window.location.search.indexOf('loc=ZA') > -1) {
     var discount;
     var qty;
     var price = 99;
-
+    
     document.querySelector('.sb-Pricing__wrapper__item.sb-Pricing__title h3').innerHTML = 
         `Only&nbsp;<span class="strikethrough" style="user-select: auto;">R150.00</span>&nbsp;R99`;
     document.querySelector('.board-measure span').innerHTML = `
